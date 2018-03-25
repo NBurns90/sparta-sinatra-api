@@ -25,11 +25,11 @@ describe BlizzardAPI do
       expect(@boss.get_level).to be_instance_of(Integer)
     end
 
-    it "Boss level should be of type Integer" do
+    it "Boss zoneId should be of type Integer" do
       expect(@boss.get_zoneId).to be_instance_of(Integer)
     end
 
-    it "Boss level should be of type Integer" do
+    it "Boss JournalId should be of type Integer" do
       expect(@boss.get_journalId).to be_instance_of(Integer)
     end
 
