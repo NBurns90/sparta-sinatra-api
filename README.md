@@ -1,4 +1,4 @@
-# sparta-openweather-api
+# sparta-sinatra-api
 
 For this homework I was required to build a web app using a live **API** using **Blizzard's API**.  The **API** was retrieved using the **HTTParty** gem and then parsed using the **JSON** gem and tested using the constructed tests to make sure that the data structure worked correctly and that all the tests passed.  I was also required to display this data in the web app in a readable format.
 
