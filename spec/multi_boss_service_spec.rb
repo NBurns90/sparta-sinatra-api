@@ -11,13 +11,14 @@ describe BlizzardAPI do
 
     it 'Instantiaion of Multiboss should be of type Hash' do
       p @multiboss.get_class.class
-      # expect(@multiboss.get_class.class).to be_kind_of(Hash)
+      expect(@multiboss.get_class.class).to be_kind_of(Hash)
     end
 
     it 'Each boss hash should contain an npcs array' do
       p @multiboss.get_npcs_class(7).class
-      # expect(@multiboss.get_npcs_class(7).class).to be_kind_of(Array)
+      expect(@multiboss.get_npcs_class(7).class).to be_kind_of(Array)
     end
+
   end
 
 end
