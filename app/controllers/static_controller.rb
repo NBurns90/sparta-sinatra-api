@@ -12,9 +12,6 @@ class StaticController < Sinatra::Base
 
   get '/' do
     @title = 'Choose a Service'
-    # @boss = BlizzardAPI.new.single_boss_service.single_boss_response('26532', 'en_GB')
-    #
-    # @id = @boss['id']
 
     erb :'static/static'
   end

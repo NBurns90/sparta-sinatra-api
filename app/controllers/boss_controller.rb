@@ -10,17 +10,21 @@ class BossController < Sinatra::Base
       register Sinatra::Reloader
   end
 
-  get '/boss' do
+  get '/bosses' do
     @title = 'Bosses Homepage'
     @multiboss = BlizzardAPI.new.multi_boss_service.multi_boss_response('en_GB').values
 
-    erb :'boss/index'
+    erb :'bosses/index'
   end
 
   get '/boss/:bossID' do
-    @title = 'BOSS NAME'
 
-    erb :'boss/show'
+    id = params[:bossID].to_i
+    @boss = BlizzardAPI.new.single_boss_service.single_boss_response(id, 'en_GB')
+
+    @title = @boss['name']
+
+    erb :'bosses/show'
   end
 
 end
