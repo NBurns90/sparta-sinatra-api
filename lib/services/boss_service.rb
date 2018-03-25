@@ -26,8 +26,12 @@ class BossService
     @bossjson['level']
   end
 
-  def get_class
-    @bossjson.class
+  def get_zoneId
+    @bossjson['zoneId']
+  end
+
+  def get_journalId
+    @bossjson['journalId']
   end
 
 end
