@@ -25,6 +25,11 @@ describe BlizzardAPI do
       expect(@boss.get_level).to be_instance_of(Integer)
     end
 
+    it "Boss should be type of hash" do
+      p @boss.get_class
+      expect(@boss.get_class).to be_instance_of(Hash)
+    end
+
   end
 
 end

@@ -13,6 +13,8 @@ class StaticController < Sinatra::Base
   get '/' do
     @title = 'Choose a Service'
 
+    @bosstest = BlizzardAPI.new.single_boss_service.single_boss_response('55308', 'en_GB')
+
     erb :'static/static'
   end
 

@@ -26,4 +26,8 @@ class BossService
     @bossjson['level']
   end
 
+  def get_class
+    @bossjson.class
+  end
+
 end

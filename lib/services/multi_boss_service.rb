@@ -10,8 +10,12 @@ class MultiBossService
     @bossjson = JSON.parse(self.class.get("/?locale=#{locale}&apikey=bh6xvswtpajh4u33actdcssnurbpzqp6").body)
   end
 
-  def get_id
-    @bossjson['id']
+  def get_class
+    @bossjson
+  end
+
+  def get_npcs_class(id)
+    @bossjson['bosses'][id]['npcs']
   end
 
   def get_name
