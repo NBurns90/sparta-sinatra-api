@@ -5,8 +5,8 @@ describe BlizzardAPI do
   context 'Boss Service Tests' do
 
     before(:each) do
-      @blizzardapi = BlizzardAPI.new
-      @boss = @blizzardapi.boss_service
+      @boss = BlizzardAPI.new.single_boss_service
+      @boss.single_boss_response('26532', 'en_GB')
     end
 
     it "Boss ID should be of type Integer" do
@@ -23,7 +23,6 @@ describe BlizzardAPI do
 
     it "Boss level should be of type Integer" do
       expect(@boss.get_level).to be_instance_of(Integer)
-      p @boss
     end
 
   end

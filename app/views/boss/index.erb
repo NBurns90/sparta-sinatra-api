@@ -1,1 +1,5 @@
 <h1>Boss Index</h1>
+
+<% @multiboss.first.each do |boss| %>
+  <%= boss['name'] %><br>
+<% end  %>

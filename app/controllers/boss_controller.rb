@@ -12,6 +12,7 @@ class BossController < Sinatra::Base
 
   get '/boss' do
     @title = 'Bosses Homepage'
+    @multiboss = BlizzardAPI.new.multi_boss_service.multi_boss_response('en_GB').values
 
     erb :'boss/index'
   end

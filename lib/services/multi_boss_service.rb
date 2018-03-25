@@ -1,13 +1,13 @@
 require 'httparty'
 require 'json'
 
-class BossService
+class MultiBossService
   include HTTParty
 
   base_uri 'https://eu.api.battle.net/wow/boss'
 
-  def single_boss_response(bossid, locale)
-    @bossjson = JSON.parse(self.class.get("/#{bossid}?locale=#{locale}&apikey=bh6xvswtpajh4u33actdcssnurbpzqp6").body)
+  def multi_boss_response(locale)
+    @bossjson = JSON.parse(self.class.get("/?locale=#{locale}&apikey=bh6xvswtpajh4u33actdcssnurbpzqp6").body)
   end
 
   def get_id
